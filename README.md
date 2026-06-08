@@ -10,7 +10,7 @@ The workflows implemented here were developed in the context of the **PX1 manusc
 ## Features
 
 This repository contains **two main genomic analysis pipelines**, implemented in two files: [`Selection.R`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/PX1_Manuscript_github.R) and [`making_ldhat.sh`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/making_ldhat.sh).  
-A genotype-phenotype association analysis pipeline, structured in one file [`MIxed-Effects_Model.R`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/MIxed-Effects_Model.R) and a haplotype trend estimation pipeline file [](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/Temporal_Haplotype_Frequency_Analysis.R) 
+A genotype-phenotype association analysis pipeline, structured in one file [`MIxed-Effects_Model.R`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/MIxed-Effects_Model.R) and a haplotype trend estimation pipeline file [`Temporal_Haplotype_Frequency_Analysis.R`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/Temporal_Haplotype_Frequency_Analysis.R) 
 
 Each file includes **step-by-step instructions** to guide users through the analyses. Open them to access the instructions and the codes.
 
@@ -49,15 +49,17 @@ Inline comments provide clear guidance on how to run and adapt the pipeline.
 
 ---
 
-### 3. Genotype-Phenotype Assocation (Mixed-Effects Models)  
+### 3. Genotype-Phenotype Assocation (Mixed-Effects Model)  
 **`MIxed-Effects_Model.R`**
 
 This R script test genotype-phenotype association based on mixed-effects model. It calculates:
 
 - Cohen's effect size
-- Conditional and Marginal R2
-- Incremental R2
-- Interaction terms between genes (P-values and incremental R2)
+- Conditional and Marginal R<sup>2<sup>
+- Incremental R<sup>2<sup>
+- Interaction terms between genes (P-values and incremental R<sup>2<sup>)
+
+---
 
 ### 4. Haplotype Trend Analysis (Mann-Kendall Test)  
 **`Temporal_Haplotype_Frequency_Analysis.R`**
@@ -68,10 +70,28 @@ This R script performs Mann-Kendall Test for monotonic trend and for plotting ha
 
 ## Input Data
 
-- A **genome-wide VCF file**
-- The VCF should be filtered for:
-  - Genotype missingness
-  - Minor allele frequency (MAF)
+- For genomic analyses: a **genome-wide VCF file**
+  - The VCF should be filtered for:
+    - Genotype missingness
+    - Minor allele frequency (MAF)
+ 
+- For genotype-phenotype assocation: a simple **spreadsheet** containing at least:
+  - PX1 haplotype,
+  - K13 haplotype
+  - Year of sample collection
+  - Site
+  - IC<sub>50<sub>
+  - Drug assay name
+  - Complexity of infection
+  - Parasitemia
+  - Within-sample allele frequency (optional, good for filtering)
+ 
+- For Haplotype Trend Analysis: a simple **spreadsheet** containing at least:
+  - PX1 haplotype,
+  - K13 haplotype
+  - Year of sample collection
+  - Site
+  - Within-sample allele frequency (optional, good for filtering) 
 
 ---
 
