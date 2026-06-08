@@ -1,14 +1,17 @@
 # Genome-wide Scans for Selection and Recombination in *Plasmodium falciparum*
 
 This repository provides scripts to perform **genome-wide scans for signatures of selection and recombination** in *Plasmodium falciparum* using population genomic data.
-
+It also includes scripts for **mixed effets-based genotype-phenotype association analysis**, the **temporal trend analysis of haplotype prevalence** and **haplotype frequency plotting**. 
 The workflows implemented here were developed in the context of the **PX1 manuscript**, but they are generalizable and can be applied to other datasets with minimal adaptation.
+
 
 ---
 
 ## Features
 
-This repository contains **two main analysis pipelines**, implemented in two files: [`Selection.R`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/PX1_Manuscript_github.R) and [`making_ldhat.sh`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/making_ldhat.sh).  
+This repository contains **two main genomic analysis pipelines**, implemented in two files: [`Selection.R`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/PX1_Manuscript_github.R) and [`making_ldhat.sh`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/making_ldhat.sh).  
+A genotype-phenotype association analysis pipeline, structured in one file [`MIxed-Effects_Model.R`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/MIxed-Effects_Model.R) and a haplotype trend estimation pipeline file [](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/Temporal_Haplotype_Frequency_Analysis.R) 
+
 Each file includes **step-by-step instructions** to guide users through the analyses. Open them to access the instructions and the codes.
 
 ---
@@ -43,6 +46,23 @@ This bash script estimates **recombination rates across chromosomes** using **LD
 - Designed for large-scale, genome-wide analyses
 
 Inline comments provide clear guidance on how to run and adapt the pipeline.
+
+---
+
+### 3. Genotype-Phenotype Assocation (Mixed-Effects Models)  
+**`MIxed-Effects_Model.R`**
+
+This R script test genotype-phenotype association based on mixed-effects model. It calculates:
+
+- Cohen's effect size
+- Conditional and Marginal R2
+- Incremental R2
+- Interaction terms between genes (P-values and incremental R2)
+
+### 4. Haplotype Trend Analysis (Mann-Kendall Test)  
+**`Temporal_Haplotype_Frequency_Analysis.R`**
+
+This R script performs Mann-Kendall Test for monotonic trend and for plotting haplotype prevalences.
 
 ---
 
