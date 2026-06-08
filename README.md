@@ -1,4 +1,4 @@
-# Genome-wide Scans for  Loci Association with Antimalarial Drug Responses in *Plasmodium falciparum*
+# Genome-wide Scans for  Locus Association with Antimalarial Drug Responses in *Plasmodium falciparum*
 
 This repository provides scripts to perform **genome-wide scans for signatures of selection and recombination** in *Plasmodium falciparum* using population genomic data.
 It also includes scripts for **mixed effets-based genotype-phenotype association analysis**, the **temporal trend analysis of haplotype prevalence** and **haplotype frequency plotting**. 
