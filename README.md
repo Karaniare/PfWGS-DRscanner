@@ -10,7 +10,7 @@ The workflows implemented here were developed in the context of the **PX1 manusc
 ## Features
 
 This repository contains **two main genomic analysis pipelines**, implemented in two files: [`Selection.R`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/PX1_Manuscript_github.R) and [`making_ldhat.sh`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/making_ldhat.sh).  
-A genotype-phenotype association analysis pipeline, structured as a single file [`MIxed-Effects_Model.R`](https://github.com/Karaniare/PfWGS-DRscanner/blob/main/main/MIxed-Effects_Model.R) and a haplotype trend estimation pipeline file [`Temporal_Haplotype_Frequency_Analysis.R`](https://github.com/Karaniare/Genome_wide_scan_for_Selection_and_Recombination_PX1/blob/main/Temporal_Haplotype_Frequency_Analysis.R) 
+A genotype-phenotype association analysis pipeline, structured as a single file [`MIxed-Effects_Model.R`](https://github.com/Karaniare/PfWGS-DRscanner/blob/main/main/MIxed-Effects_Model.R) and a haplotype trend estimation pipeline file [`Temporal_Haplotype_Frequency_Analysis.R`](https://github.com/Karaniare/PfWGS-DRscanner/blob/main/main/Temporal_Haplotype_Frequency_Analysis.R) 
 
 Each file includes **step-by-step instructions** to guide users through the analyses. Open them to access the instructions and the codes.
 
